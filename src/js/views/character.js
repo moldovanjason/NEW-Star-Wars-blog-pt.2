@@ -1,33 +1,40 @@
 import React from "react";
+import rigoImage from "../../img/rigo-baby.jpg";
+import "../../styles/home.scss";
+import { Navbar } from "../components/navBar";
 import { Card } from "../components/card";
+import { Planets } from "./planets";
 
 //create your first component
-export class Planets extends React.Component {
+export class Home extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			planets: []
+			char: []
 		};
 	}
 
 	componentDidMount() {
-		fetch("https://swapi.dev/api/planets/")
+		fetch("https://swapi.dev/api/people/")
 			.then(response => response.json())
-			.then(planet => this.setState({ planets: planet.results }))
-			.catch(err => console.log(err));
+			.then(characters => this.setState({ char: characters.results }));
 	}
 
 	render() {
-		console.log(this.state.planets);
-		var planetCards = null;
-		if (this.state.planets.length > 1) {
-			planetCards = this.state.planets.map((planet, cardIndex) => {
-				return <Card key={cardIndex} name={planet.name} />;
-			});
-		} else {
-			// console.log("loading...");
-		}
-
-		return <div className="planetCards">{planetCards}</div>;
+		return (
+			<div className="container-fluid">
+				<div className="charCards">
+					{this.state.char.length > 1 ? (
+						this.state.char.map((character, cardIndex) => {
+							return <Card key={cardIndex} name={character.name} />
+						})
+					) : (
+						<h1>Loading...</h1>
+					)}
+                    hello
+				</div>
+				<Planets />
+			</div>
+		);
 	}
 }

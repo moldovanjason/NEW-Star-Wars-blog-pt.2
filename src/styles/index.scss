@@ -34,7 +34,6 @@
     width:2000px;
     margin:8px;
     margin-bottom:10px;
-    overflow-x: scroll;
 }
 
 .charCards{
@@ -43,5 +42,25 @@
     width:2000px;
     margin:8px;
     margin-bottom:10px;
-    overflow-x: scroll;
+    overflow:auto;
+    white-space:nowrap;
+}
+
+.nf{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 80px;
+    color:rgb(192, 0, 0);
+}
+
+.link{
+    color:white;
+}
+
+.link:hover{
+    color:rgb(200, 200, 200);
+}
+
+.link:active{
+    color:white;
 }

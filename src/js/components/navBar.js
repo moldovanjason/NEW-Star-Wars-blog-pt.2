@@ -9,19 +9,29 @@ export const Navbar = () => {
 				<a className="navbar-brand" href="#">
 					<ul className="logo">
 						<li>
-							<i className="fab fa-facebook-square" />
+							<a href="https://www.facebook.com/StarWars/">
+								<i className="link fab fa-facebook-square" />
+							</a>
 						</li>
 						<li>
-							<i className="fab fa-youtube" />
+							<a href="https://www.youtube.com/c/StarWars/featured">
+								<i className="link fab fa-youtube" />
+							</a>
 						</li>
 						<li>
-							<i className="fab fa-instagram" />
+							<a href="https://www.instagram.com/starwars/">
+								<i className="link fab fa-instagram" />
+							</a>
 						</li>
 						<li>
-							<i className="fab fa-twitter" />
+							<a href="https://twitter.com/starwars">
+								<i className="link fab fa-twitter" />
+							</a>
 						</li>
 						<li>
-							<i className="fab fa-tumblr" />
+							<a href="https://www.tumblr.com/search/star+wars">
+								<i className="link fab fa-tumblr" />
+							</a>
 						</li>
 					</ul>
 				</a>
