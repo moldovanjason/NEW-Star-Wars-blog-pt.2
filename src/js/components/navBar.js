@@ -39,7 +39,7 @@ export const Navbar = () => {
 					className="img"
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/1024px-Star_Wars_Logo_2.svg.png"
 				/>
-				<form className="form-inline my-2 my-lg-0">
+				<form className="search form-inline my-2 my-lg-0">
 					<input
 						className="form-control mr-sm-2"
 						type="search"

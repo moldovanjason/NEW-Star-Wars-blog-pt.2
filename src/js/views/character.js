@@ -6,7 +6,7 @@ import { Card } from "../components/card";
 import { Planets } from "./planets";
 
 //create your first component
-export class Home extends React.Component {
+export class Characters extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -26,14 +26,13 @@ export class Home extends React.Component {
 				<div className="charCards">
 					{this.state.char.length > 1 ? (
 						this.state.char.map((character, cardIndex) => {
-							return <Card key={cardIndex} name={character.name} />
+							return <Card key={cardIndex} name={character.name} />;
 						})
 					) : (
 						<h1>Loading...</h1>
 					)}
-                    hello
+					hello
 				</div>
-				<Planets />
 			</div>
 		);
 	}

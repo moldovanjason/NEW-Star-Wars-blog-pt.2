@@ -54,7 +54,8 @@
 }
 
 .link{
-    color:white;
+    padding:4px;
+    font-size: 40px;
 }
 
 .link:hover{
@@ -63,4 +64,8 @@
 
 .link:active{
     color:white;
+}
+
+.search{
+    padding:10px;
 }
