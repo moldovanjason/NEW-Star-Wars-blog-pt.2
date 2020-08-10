@@ -4,6 +4,7 @@ import "../../styles/home.scss";
 import { Navbar } from "../components/navBar";
 import { Card } from "../components/card";
 import { Planets } from "./planets";
+
 //create your first component
 export class Home extends React.Component {
 	constructor() {
@@ -22,7 +23,6 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<div className="container-fluid">
-				<Navbar />
 				<div className="charCards">
 					{this.state.char.length > 1 ? (
 						this.state.char.map((character, cardIndex) => {

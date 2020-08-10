@@ -18,13 +18,14 @@ export class Planets extends React.Component {
 	}
 
 	render() {
+		console.log(this.state.planets);
 		var planetCards = null;
 		if (this.state.planets.length > 1) {
 			planetCards = this.state.planets.map((planet, cardIndex) => {
 				return <Card key={cardIndex} name={planet.name} />;
 			});
 		} else {
-			console.log("loading...");
+			// console.log("loading...");
 		}
 
 		return <div className="planetCards">{planetCards}</div>;

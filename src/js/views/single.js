@@ -2,9 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { withRouter } from "react-router-dom";
 
-export const Single = props => {
+const Single = props => {
 	const { store, actions } = useContext(Context);
+	console.log(props);
 	return (
 		<div className="jumbotron">
 			<h1 className="display-4">This will show the demo element: {store.demo[props.match.params.theid].title}</h1>
@@ -23,3 +25,5 @@ export const Single = props => {
 Single.propTypes = {
 	match: PropTypes.object
 };
+
+export default withRouter(Single);
