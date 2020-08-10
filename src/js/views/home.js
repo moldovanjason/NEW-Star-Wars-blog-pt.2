@@ -1,15 +1,40 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
+import { Navbar } from "../components/navBar";
+import { Card } from "../components/card";
+import { Planets } from "./planets";
+//create your first component
+export class Home extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			char: []
+		};
+	}
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+	componentDidMount() {
+		fetch("https://swapi.dev/api/people/")
+			.then(response => response.json())
+			.then(characters => this.setState({ char: characters.results }));
+	}
+
+	render() {
+		return (
+			<div className="container-fluid">
+				<Navbar />
+				<div className="charCards">
+					{this.state.char.length > 1 ? (
+						this.state.char.map((character, cardIndex) => {
+							return <Card key={cardIndex} name={character.name} />;
+						})
+					) : (
+						<h1>Loading...</h1>
+					)}
+					;
+				</div>
+				<Planets />
+			</div>
+		);
+	}
+}
