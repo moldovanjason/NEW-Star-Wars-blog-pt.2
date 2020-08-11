@@ -12,10 +12,22 @@
     width:100%;
     margin:0;
     background:black;
-    color:white !important;
     height:150px;
 }
 
+.navBar{
+    height:50px;
+    background-color:rgb(238, 226, 64);
+    color: white !important; 
+}
+
+.NavBar{
+    margin:20px;
+    font-size:30px;
+    padding:40px;
+    color:white ;
+    
+}
 
 .logo li{
     display:inline;
