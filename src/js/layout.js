@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./components/scrollToTop";
-import { Home } from "./views/home";
 import injectContext from "./store/appContext";
 import { Planets } from "./views/planets";
 import { PlanetsDetails } from "./views/planetsDetails";
@@ -22,24 +21,11 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/home">
-							<Home />
-						</Route>
-						<Route exact path="/planets">
-							<Planets />
-						</Route>
-						<Route exact path="/planetsdetails">
-							<PlanetsDetails />
-						</Route>
-						<Route exact path="/characters">
-							<Characters />
-						</Route>
-						<Route exact path="/charactersdetails">
-							<CharactersDetails />
-						</Route>
+						<Route exact path="/" component={Characters} />
+						<Route exact path="/characters" component={Characters} />
+						<Route exact path="/planets" component={Planets} />
+						<Route exact path="/planetsdetails/:id" component={PlanetsDetails} />
+						<Route exact path="/charactersdetails/:id" component={CharactersDetails} />
 						<Route>
 							<h1 className="nf">***Page Not Found***</h1>
 						</Route>

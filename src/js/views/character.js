@@ -4,8 +4,8 @@ import { Card } from "../components/card";
 
 //create your first component
 export class Characters extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			char: []
 		};
@@ -18,15 +18,16 @@ export class Characters extends React.Component {
 	}
 
 	render() {
+		console.log(this.props);
 		return (
 			<div className="container-fluid">
 				<div className="charCards">
 					{this.state.char.length > 1 ? (
 						this.state.char.map((character, cardIndex) => {
-							return <Card key={cardIndex} name={character.name} />;
+							return <Card {...this.props} key={cardIndex} name={character.name} />;
 						})
 					) : (
-						<h1 classingName="load">Loading...</h1>
+						<h1 className="load">Loading...</h1>
 					)}
 				</div>
 			</div>

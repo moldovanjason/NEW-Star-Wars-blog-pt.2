@@ -49,26 +49,15 @@ export const Navbar = () => {
 			<nav className="navbar-expand-lg navbar-light bg-light">
 				<div className="navBar collapse navbar-collapse" id="navbarNav">
 					<ul className="NavBar navbar-nav">
-						<li className="nav-item active">
-							<a
-								className="nav-link"
-								href="https://3000-ced674bb-8961-4625-9d33-2b5e68ae7a20.ws-us02.gitpod.io/">
-								Home <span className="sr-only" />
-							</a>
-						</li>
 						<li className="nav-item">
-							<a
-								className="nav-link"
-								href="https://3000-ced674bb-8961-4625-9d33-2b5e68ae7a20.ws-us02.gitpod.io/characters">
+							<Link className="nav-link" to="/characters">
 								Characters
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a
-								className="nav-link"
-								href="#https://3000-ced674bb-8961-4625-9d33-2b5e68ae7a20.ws-us02.gitpod.io/planets">
+							<Link className="nav-link" to="planets">
 								Planets
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</div>
