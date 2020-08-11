@@ -44,9 +44,6 @@ const Layout = () => {
 						<Route exact path="/charactersdetails">
 							<CharactersDetails />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
 						<Route>
 							<h1 className="nf">***Page Not Found***</h1>
 						</Route>
