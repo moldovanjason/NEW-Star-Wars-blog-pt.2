@@ -19,6 +19,7 @@ export class CharactersDetails extends React.Component {
 		return <div className="container-fluid">Hello</div>;
 	}
 }
+
 CharactersDetails.propTypes = { match: PropTypes.object };
 
 export default CharactersDetails;
