@@ -14,7 +14,8 @@ export class Characters extends React.Component {
 	componentDidMount() {
 		fetch("https://swapi.dev/api/people/")
 			.then(response => response.json())
-			.then(characters => this.setState({ char: characters.results }));
+			.then(characters => this.setState({ char: characters.results }))
+			.catch(err => console.log(err));
 	}
 
 	render() {
