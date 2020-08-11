@@ -24,7 +24,7 @@ export class Planets extends React.Component {
 				return <Card key={cardIndex} name={planet.name} />;
 			});
 		} else {
-			console.log("loading....");
+			console.log("loading...");
 		}
 
 		return <div className="planetCards">{planetCards}</div>;

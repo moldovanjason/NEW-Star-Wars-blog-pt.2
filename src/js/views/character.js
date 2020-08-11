@@ -29,7 +29,7 @@ export class Characters extends React.Component {
 							return <Card key={cardIndex} name={character.name} />;
 						})
 					) : (
-						<h1 classingName="load">Loading....</h1>
+						<h1 classingName="load">Loading...</h1>
 					)}
 				</div>
 			</div>
