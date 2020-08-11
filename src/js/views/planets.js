@@ -3,8 +3,8 @@ import { Card } from "../components/card";
 
 //create your first component
 export class Planets extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			planets: []
 		};

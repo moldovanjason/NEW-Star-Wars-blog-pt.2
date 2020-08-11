@@ -12,7 +12,10 @@ export const Card = props => {
 						<img src="..." className="card-img-top" alt="..." />
 						<div className="card-body">
 							<p className="card-text">{props.name}</p>
-							<button type="button" className="btn btn-primary" onClick={() => {}}>
+							<button
+								type="button"
+								className="btn btn-primary"
+								onClick={() => props.history.push(`/charactersdetails/${props.index}`)}>
 								More Info
 							</button>
 							<button onClick={() => context.actions.addFavorite(props.name)}>
@@ -28,5 +31,7 @@ export const Card = props => {
 
 Card.propTypes = {
 	name: PropTypes.string,
-	keyIndex: PropTypes.number
+	keyIndex: PropTypes.number,
+	history: PropTypes.object,
+	index: PropTypes.number
 };

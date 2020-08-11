@@ -24,7 +24,7 @@ export class Characters extends React.Component {
 				<div className="charCards">
 					{this.state.char.length > 1 ? (
 						this.state.char.map((character, cardIndex) => {
-							return <Card {...this.props} key={cardIndex} name={character.name} />;
+							return <Card index={cardIndex} {...this.props} key={cardIndex} name={character.name} />;
 						})
 					) : (
 						<h1 className="load">Loading...</h1>

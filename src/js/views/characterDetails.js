@@ -21,5 +21,3 @@ export class CharactersDetails extends React.Component {
 }
 
 CharactersDetails.propTypes = { match: PropTypes.object };
-
-export default CharactersDetails;

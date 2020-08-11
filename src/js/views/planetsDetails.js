@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export class PlanetsDetails extends React.Component {
 	constructor(props) {
@@ -19,6 +20,4 @@ export class PlanetsDetails extends React.Component {
 	}
 }
 
-CharactersDetails.propTypes = { match: PropTypes.object };
-
-export default CharactersDetails;
+PlanetsDetails.propTypes = { match: PropTypes.object };
