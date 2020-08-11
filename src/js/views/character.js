@@ -1,9 +1,6 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
-import { Navbar } from "../components/navBar";
 import { Card } from "../components/card";
-import { Planets } from "./planets";
 
 //create your first component
 export class Characters extends React.Component {
