@@ -19,7 +19,6 @@ export class Characters extends React.Component {
 	}
 
 	render() {
-		console.log(this.props);
 		return (
 			<div className="container-fluid">
 				<div className="charCards">

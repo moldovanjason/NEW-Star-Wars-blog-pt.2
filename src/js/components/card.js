@@ -21,6 +21,9 @@ export const Card = props => {
 							<button onClick={() => context.actions.addFavorite(props.name)}>
 								<i className="fas fa-heart" />
 							</button>
+							{/* <button onClick={() => context.actions.addFavorite(props.name)}>
+								<i className="fas fa-heart" />
+							</button> */}
 						</div>
 					</div>
 				);
