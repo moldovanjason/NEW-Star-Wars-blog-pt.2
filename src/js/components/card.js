@@ -14,14 +14,11 @@ export const Card = props => {
 							<p className="card-text">{props.name}</p>
 							<button
 								type="button"
-								className="btn btn-primary"
+								className="moreinfobutton btn btn-primary"
 								onClick={() => props.history.push(`/charactersdetails/${props.index}`)}>
 								More Info
 							</button>
-							<button onClick={() => context.actions.addFavorite(props.name)}>
-								<i className="fas fa-heart" />
-							</button>
-							<button onClick={() => context.actions.addFavorite(props.name)}>
+							<button className="likebutton" onClick={() => context.actions.addFavorite(props.name)}>
 								<i className="fas fa-heart" />
 							</button>
 						</div>
